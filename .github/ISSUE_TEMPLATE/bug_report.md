@@ -3,15 +3,8 @@ name: Bug report
 about: Create a report to help us improve
 title: 'BUG: [Title]'
 labels: bug
-assignees: cat-master21, oklopfer
-
+assignees: komaru-meow, justwinstuff
 ---
-
-**Rhino Linux Version:**
-A numerical version for Rhino Linux. Example: `2023.1`, - Version number can be found by running `neofetch` (preinstalled) or with the "Your System" application.
-
-**Platform:**
-[CPU Architecture / Device]
 
 **Describe the bug**
 A clear and concise description of what the bug is.
