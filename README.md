@@ -1,15 +1,13 @@
-### Issues Tracker
+<div align="center">
+  <img src="https://nexalinux.xyz/nexa2.png">
+  <h1>Nexa Linux - ISO builder</h1>
+  <p>Penguins' Eggs was hard to maintain, so here we are, with a fork of [Rhino Linux's ISO builder](http://github.com/rhino-linux/os/) with Nexa Linux changes.</p>
+</div>
 
-To report issues or propose new features for this repository, visit [our tracker](https://github.com/rhino-linux/tracker).
+> [!CAUTION]
+> This builder is W.I.P. Do not use!
 
-## Rhino Linux ISO Builder
-
----
-Originally forked from [Vanilla-OS's ISO builder](https://github.com/Vanilla-OS/live-iso), which forked from [Cinnamon's ISO builder](https://github.com/ubuntucinnamon/iso-builder-devel), which forked from [Elementary's ISO builder](https://github.com/elementary/os) :) 
-
----
-
-This is the new Rhino Linux (RL) ISO builder (replaces the formerly known [RRR-builder](https://github.com/rollingrhinoremix/RRR-builder)) which creates images from scratch and gives us (even) more control over the final image. To set up the builder:
+To use this ISO builder, you must prepare your converted system with these commands:
 
 - `sudo apt-get update && sudo apt-get install --reinstall debootstrap -y`
 - `sudo mv /usr/share/debootstrap/functions functions`
@@ -20,10 +18,13 @@ This is the new Rhino Linux (RL) ISO builder (replaces the formerly known [RRR-b
 - `sudo cp binary_grub-efi /usr/lib/live/build/binary_grub-efi`
 - `sudo chmod -R +x build.sh etc/auto/config etc/terraform.conf etc/`
 
-Then, to build: 
+Then, to build the ISO: 
 
 `sudo ./build.sh etc/terraform.conf`
 
-The resulting ISO, if successful, will be located in builds/`$ARCH`. The builder should automatically detect whether to build on ARM64 or AMD64, depending on the machine you run it on. **32-bit images are unsupported.**
+The resulting ISO, if successful, will be located in builds/`$ARCH`. **Keep in mind, we do not support ARM64 nor 32-bit builds!**
 
 This build system creates the images using `lb`/live-build with debootstrap to create images with configuration in `etc` folder.
+
+# Credits:
+- [Rhino Linux](https://github.com/rhino-linux/) for making the [ISO builder](http://github.com/rhino-linux/os/) (which this repo is a fork of).
